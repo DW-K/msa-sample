@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    host: localhost    #rabbitmq 호스트
+    port: 5672         #rabbitmq 서비스 포트
+    username: guest    #rabbitmq 사용자명
+    password: guest    #rabbitmq 비밀번호
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #엔드포인트, ex) http://localhost:9265/actuator/bus-refresh (POST)

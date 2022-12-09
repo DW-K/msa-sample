@@ -1,0 +1,56 @@
+version: "2"
+services:
+  eureka-server:
+    build: eureka-server
+    image: dodo133/msa_sample-eureka-server:latest
+    container_name: msa_sample-eureka-server
+    ports:
+      - 8761:8761
+
+#  rabbitmq:
+#    image: rabbitmq:latest
+#    container_name: msa_sample-rabbitmq
+#    ports:
+#      - 5672:5672
+
+  config-server:
+    build: config-server
+    image: dodo133/msa_sample-config-server:latest
+    container_name: msa_sample-config-server
+    ports:
+      - 8888:8888
+
+#  config-client:
+#    build: config-client
+#    image: dodo133/msa_sample-config-client:latest
+#    container_name: msa_sample-config-client
+#    ports:
+#      - 9265:9265
+
+  zuul-server:
+    build: zuul-server
+    image: dodo133/msa_sample-zuul-server:latest
+    container_name: msa_sample-zuul-server
+    ports:
+      - 8080:8080
+
+  catalogs:
+    build: catalogs
+    image: dodo133/msa_sample-catalogs:latest
+    container_name: msa_sample-catalogs
+    ports:
+      - 8081:8081
+
+  customers:
+    build: customers
+    image: dodo133/msa_sample-customers:latest
+    container_name: msa_sample-customers
+    ports:
+      - 8082:8082
+
+  sidecar:
+    build: sidecar
+    image: dodo133/msa_sample-sidecar:latest
+    container_name: msa_sample-sidecar
+    ports:
+      - 5678:5678

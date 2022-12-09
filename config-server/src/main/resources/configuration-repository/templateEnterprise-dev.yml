@@ -1,0 +1,12 @@
+
+config:
+  profile: ebt-changed
+  message: templateEnterprise(dev)
+
+Globals:
+  DbType: mysql
+  DriverClassName: com.mysql.jdbc.Driver
+  Url: jdbc:mysql://127.0.0.1:3306/ebt
+  UserName: com
+  Password: com01
+

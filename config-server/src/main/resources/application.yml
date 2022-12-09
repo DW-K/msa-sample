@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name:
+      -templateSimple
+      -templatePortal
+      -templateEnterprise
+
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:configuration-repository/  #검색할 설정파일 경로

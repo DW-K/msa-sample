@@ -1,0 +1,10 @@
+server:
+  port: 9265  #서버포트
+
+spring:
+  application:
+    name: templateEnterprise  #서비스ID (Config Client가 어떤 서비스를 조회할지의 매핑)
+
+  cloud:
+    config:
+      uri: http://localhost:8888    #Config서버 URL
